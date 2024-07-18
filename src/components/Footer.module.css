@@ -1,0 +1,176 @@
+@import './variables.module.css';
+
+.footer {
+    background-color: var(--footer-background);
+    color: #ddd;
+    text-align: center;
+    padding: var(--footer-padding);
+    border-radius: 10px;
+}
+
+.footerContent {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.footerLinks, .contactInfo, .socialMedia {
+    width: 100%;
+    margin-bottom: 20px;
+    display: grid;
+    justify-content: center;
+}
+
+.footerLinks {
+    display: flex;
+    justify-content: center;
+}
+
+.footerLink {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 8px;
+    background: var(--footer-background);
+    transition: color var(--transition-duration) ease, background-color var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.footerLink:hover {
+    color: #32CD32;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.contactInfo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contactInfo h2 {
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.contactInfo p {
+    color: #ddd;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.newsletterForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.newsletterInput {
+    padding: 12px;
+    margin: 0 10px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+}
+
+.newsletterInput:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.newsletterInput:invalid {
+    border: 1px solid #dc3545;
+}
+
+.newsletterButton {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease, transform var(--transition-duration) ease;
+}
+
+.newsletterButton:hover {
+    background-color: #f1f1f1;
+    color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.footerContent .socialMedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.socialMedia h2 {
+    color: #000;
+    margin-bottom: 2px;
+}
+
+.socialMedia a {
+    margin: 10px;
+    font-size: 28px;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.socialMedia a:hover {
+    color: #006400;
+    transform: translateY(-5px);
+}
+
+.faTwitter i {
+    display: none;
+}
+
+.faTwitter::before {
+    content: "𝕏";
+    font-size: 28px;
+    color: #fff;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.faTwitter:hover::before {
+    color: #006400;
+    transform: translateY(-5px);
+}
+
+.copyright {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 13px;
+    text-align: center;
+    padding: 15px 20px;
+    transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease;
+    border-top: 2px solid #ddd;
+}
+
+.copyright:hover {
+    background-color: #f1f1f1;
+    color: var(--primary-color);
+}
+
+.copyright::before {
+    content: "©";
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-right: 5px;
+    transition: color var(--transition-duration) ease;
+}
+
+.copyright:hover::before {
+    color: #0056b3;
+}

@@ -1,0 +1,49 @@
+@import './variables.module.css';
+
+
+
+.main {
+    width: 80%;
+    margin: var(--main-margin);
+    background-color: var(--background-color);
+    padding: var(--main-padding);
+    box-shadow: 0 0 10px rgba(3, 3, 3, 0.3);
+    border-color: #000000;
+    margin-top: 8%;
+    border-radius: 10px;
+}
+
+.privacyPolicyIcons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px var(--main-padding);
+}
+
+.privacyPolicyH1 {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.privacyPolicyH2 {
+    color: var(--text-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.privacyPolicyP, .privacyPolicyUl {
+    margin-bottom: 20px;
+}
+
+.privacyPolicyUl {
+    padding-left: 20px;
+}
+
+.privacyPolicyLi {
+    margin-bottom: 10px;
+}
+
+.privacyPolicyStrong {
+    color: #333333;
+}
