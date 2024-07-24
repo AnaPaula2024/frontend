@@ -11,9 +11,9 @@ const FeaturedPosts = ({ posts }) => {
     const updatedPosts = posts.map(post => {
         switch (post.image) {
             case 'PNRS.png':
-                return { ...post, imgSrc: image1 }; // Corrigido para `imgSrc`
+                return { ...post, imgSrc: image1 };
             case 'ISO.png':
-                return { ...post, imgSrc: image2 }; // Corrigido para `imgSrc`
+                return { ...post, imgSrc: image2 };
             default:
                 return post;
         }
@@ -26,7 +26,7 @@ const FeaturedPosts = ({ posts }) => {
                 {updatedPosts.map(post => (
                     <Post
                         key={post.title}
-                        imgSrc={post.imgSrc} // Corrigido para `imgSrc`
+                        imgSrc={post.imgSrc}
                         title={post.title}
                         description={post.description}
                         link={post.link}
@@ -34,3 +34,7 @@ const FeaturedPosts = ({ posts }) => {
                 ))}
             </div>
         </section>
+    );
+};
+
+export default FeaturedPosts;

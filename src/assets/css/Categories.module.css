@@ -7,3 +7,9 @@
     color: var(--secondary-color);
     margin-bottom: 20px;
 }
+.posts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}

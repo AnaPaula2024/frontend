@@ -1,4 +1,3 @@
-// src/components/Post.jsx
 
 import React from 'react';
 import styles from '../assets/css/Post.module.css'; 

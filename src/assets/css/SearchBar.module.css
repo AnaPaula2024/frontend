@@ -1,3 +1,16 @@
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+}
+
+
 .searchBar {
     display: flex;
     align-items: center;
@@ -5,11 +18,16 @@
     overflow: hidden;
     background-color: #f1f1f1; /* Fundo claro */
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    /* Garantir que a barra de busca fique acima de outros elementos */
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
 }
 
 .searchBar:hover {
     background-color: #e0e0e0; /* Fundo mais escuro ao passar o mouse */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
+    animation: pulse 1.5s infinite; 
 }
 
 .searchInput {
@@ -20,6 +38,7 @@
     width: 200px;
     border-radius: 5px 0 0 5px;
     cursor: text;
+    width: 100%;
 }
 
 .searchButton {
