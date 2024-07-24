@@ -1,0 +1,9 @@
+.featuredPosts {
+    margin-bottom: 40px;
+}
+
+.featuredPosts h2 {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}

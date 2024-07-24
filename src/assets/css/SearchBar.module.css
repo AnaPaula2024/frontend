@@ -1,0 +1,41 @@
+.searchBar {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #f1f1f1; /* Fundo claro */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.searchBar:hover {
+    background-color: #e0e0e0; /* Fundo mais escuro ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
+}
+
+.searchInput {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    width: 200px;
+    border-radius: 5px 0 0 5px;
+    cursor: text;
+}
+
+.searchButton {
+    padding: 10px 15px;
+    background-color: #164B30; /* Botão verde */
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.searchButton:hover {
+    background-color: var(--primary-color); /* Muda a cor ao passar o mouse */
+    transform: scale(1.1); /* Aumenta ligeiramente o tamanho */
+}
+
+.searchButton i {
+    font-size: 16px;
+}

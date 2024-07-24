@@ -1,0 +1,114 @@
+.main {
+    width: 90%;
+    max-width: 1600px;
+    margin: var(--main-margin) auto;
+    background-color: var(--background-color);
+    padding: var(--main-padding);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 8%;
+    border-radius: 10px;
+}
+
+
+@media (min-width: 1920px) {
+    main {
+        width: 80%; /* Largura do conteúdo principal */
+        max-width: 1600px; /* Largura máxima do conteúdo principal */
+    }
+
+    header, footer {
+        max-width: 1920px; /* Largura máxima do cabeçalho e rodapé */
+    }
+
+    .posts {
+        justify-content: space-between; /* Alinhamento dos posts */
+    }
+
+    .post {
+        width: 48%; /* Largura dos posts */
+    }
+
+    .footer-content {
+        justify-content: space-between; /* Alinhamento dos elementos do rodapé */
+    }
+
+    .footer-links, .contact-info, .social-media {
+        width: auto; /* Largura automática dos elementos do rodapé */
+        text-align: left; /* Alinhamento do texto no rodapé */
+    }
+
+    .footer-content .footer-links {
+        margin-bottom: 0; /* Margem inferior dos links do rodapé */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    main {
+        width: 90%; /* Largura do conteúdo principal */
+        max-width: 1400px; /* Largura máxima do conteúdo principal */
+    }
+
+    header, footer {
+        max-width: 100%; /* Largura máxima do cabeçalho e rodapé */
+    }
+
+    .posts {
+        justify-content: space-around; /* Alinhamento dos posts */
+    }
+
+    .post {
+        width: 45%; /* Largura dos posts */
+    }
+
+    .footer-content {
+        justify-content: center; /* Alinhamento dos elementos do rodapé */
+    }
+
+    .footer-links, .contact-info, .social-media {
+        width: auto; /* Largura automática dos elementos do rodapé */
+        text-align: center; /* Alinhamento do texto no rodapé */
+    }
+
+    .footer-content .footer-links {
+        margin-bottom: 20px; /* Margem inferior dos links do rodapé */
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        width: 100%; /* Largura do menu */
+        padding: 0 10px; /* Espaçamento interno do menu */
+    }
+
+    .nav-links {
+        display: none; /* Esconde os links do menu */
+    }
+
+    main {
+        width: 100%; /* Largura do conteúdo principal */
+        max-width: 100%; /* Largura máxima do conteúdo principal */
+        margin-top: 10px; /* Margem superior do conteúdo principal */
+    }
+
+    .posts {
+        flex-direction: column; /* Direção dos posts */
+    }
+
+    .post {
+        width: 100%; /* Largura dos posts */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Direção dos elementos do rodapé */
+    }
+
+    .footer-links, .contact-info, .social-media {
+        width: 100%; /* Largura dos elementos do rodapé */
+        text-align: center; /* Alinhamento do texto no rodapé */
+    }
+
+    .footer-content .footer-links {
+        margin-bottom: 20px; /* Margem inferior dos links do rodapé */
+    }
+}
+
