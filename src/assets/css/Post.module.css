@@ -3,7 +3,7 @@
     width: 48%;
     margin-bottom: 20px;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #90ee90;
     border-radius: 10px;
     display: flex;
     flex-direction: column; /* Permite que os filhos usem flexbox para posicionamento */
@@ -67,5 +67,5 @@
 }
 
 .post.visible {
-    display: block; /* ou flex, dependendo do layout desejado */
+    display: flex; 
 }

@@ -1,3 +1,4 @@
+/* Variáveis globais */
 :root {
   --primary-color: #007bff;
   --secondary-color: #4D6183;
@@ -5,7 +6,7 @@
   --background-color: #fff;
   --footer-background: #164B30;
   --hover-color: #006400;
-  --dark-gray: #333333;
+  --dark-gray: #333333; /* Adicionado no blog, mas pode ser útil globalmente */
   --main-padding: 20px;
   --header-padding: 20px 0;
   --footer-padding: 50px 0;
@@ -14,6 +15,7 @@
   --transition-duration: 0.3s;
 }
 
+/* Estilos gerais */
 * {
   margin: 0;
   padding: 0;
@@ -25,3 +27,4 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
 }
+

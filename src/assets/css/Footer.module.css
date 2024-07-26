@@ -24,9 +24,10 @@
     margin-bottom: 20px;
 }
 
-.contactInfo{
+.contactInfo {
     margin-top: 20px;
 }
+
 .footerLinks {
     display: flex;
     justify-content: center;
@@ -118,41 +119,16 @@
 
 .socialMedia a {
     margin: 10px;
-    font-size: 28px;
+    font-size: 32px; /* Tamanho do caractere */
     color: #fff;
+    text-decoration: none; /* Remove o sublinhado do link */
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .socialMedia a:hover {
-    color: #006400; /* Mudança de cor ao passar o mouse */
-    transform: translateY(-5px);
+    color: #006400; /* Cor ao passar o mouse */
+    transform: translateY(-5px)/* Aumenta o caractere ao passar o mouse */
 }
-
-.socialMedia i {
-    font-size: 28px; /* Tamanho dos ícones */
-}
-
-/* Estilo para o contêiner do ícone */
-a .fa-twitter {
-    font-size: 0; /* Oculta o ícone original */
-}
-
-/* Adicionar o novo ícone 'X' */
-a .fa-twitter::before {
-    content: "𝕏"; /* O caractere 'X' */
-    font-size: 28px; /* Tamanho do novo ícone */
-    color: #000; /* Cor do novo ícone */
-    font-weight: 900; /* Peso da fonte para o 'X' */
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
-/* Adicionar uma cor de hover, se desejar */
-a .fa-twitter:hover::before {
-    color: #0056b3; /* Ajuste a cor conforme necessário */
-    transform: scale(1.1); /* Efeito de aumento no hover */
-}
-
 
 .copyright {
     margin-top: 0;

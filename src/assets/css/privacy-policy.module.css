@@ -1,0 +1,60 @@
+.main {
+    /* Estilos para o contêiner da página */
+    width: 80%;
+    margin: var(--main-margin);
+    background-color: var(--background-color);
+    padding: var(--main-padding);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 8%;
+    border-radius: 10px;
+}
+
+.privacyPolicy {
+    padding: var(--main-padding);
+}
+
+.privacyPolicy .icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px var(--main-padding);
+}
+
+.privacyPolicy h1 {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.privacyPolicy h2 {
+    color: var(--text-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.privacyPolicy p, .privacyPolicy ul {
+    margin-bottom: 20px;
+}
+
+.privacyPolicy ul {
+    padding-left: 20px;
+}
+
+.privacyPolicy ul li {
+    margin-bottom: 10px;
+}
+
+.privacyPolicy strong {
+    color: var(--dark-gray);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

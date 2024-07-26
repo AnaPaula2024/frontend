@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookSquare, faLinkedin, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookSquare, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { ToastContainer, toast } from 'react-toastify'; // Importa diretamente de react-toastify
+import 'react-toastify/dist/ReactToastify.css'; // Importa o CSS do react-toastify
 import styles from '../assets/css/Footer.module.css'; // Importa o CSS Module
 
 const Footer = () => {
     const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -19,13 +20,15 @@ const Footer = () => {
                 body: JSON.stringify({ email }),
             });
             if (response.ok) {
-                setMessage('Inscrição bem-sucedida! Você receberá nossas atualizações por e-mail.');
-                setEmail('');
+                toast.success('Inscrição bem-sucedida! Você receberá nossas atualizações por e-mail.');
+                setTimeout(() => {
+                    setEmail(''); // Limpa o campo após a notificação de sucesso
+                }, 1000); // Tempo para garantir que a notificação foi exibida
             } else {
-                setMessage('Houve um problema ao se inscrever. Tente novamente.');
+                toast.error('Houve um problema ao se inscrever. Tente novamente.');
             }
         } catch (error) {
-            setMessage('Erro ao se inscrever. Por favor, tente novamente.');
+            toast.error('Erro ao se inscrever. Por favor, tente novamente.');
         }
     };
 
@@ -57,8 +60,8 @@ const Footer = () => {
                         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faInstagram} />
                         </a>
-                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faTwitter} />
+                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" className={styles.iconX}>
+                            𝕏
                         </a>
                     </div>
                 </div>
@@ -76,12 +79,13 @@ const Footer = () => {
                         />
                         <button type="submit">Assinar</button>
                     </form>
-                    {message && <p>{message}</p>}
                 </div>
             </footer>
             <div className={styles.copyright}>
                 <p>Copyright 2024 WALCEM. Todos os direitos reservados.</p>
             </div>
+            {/* Componente para exibir notificações */}
+            <ToastContainer />
         </>
     );
 };

@@ -1,12 +1,27 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
 .main {
     width: 90%;
-    max-width: 1600px;
+    max-width: 1920px;
     margin: var(--main-margin) auto;
-    background-color: var(--background-color);
     padding: var(--main-padding);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 8%;
+    border: 1px solid #90ee90;
     border-radius: 10px;
+    background-color: #fff;
+    animation: fadeIn 2s ease-out;
 }
 
 

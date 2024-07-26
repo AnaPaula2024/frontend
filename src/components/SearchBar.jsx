@@ -1,29 +1,47 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import styles from '../assets/css/SearchBar.module.css'; // Importa o CSS Module
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { InputGroup, FormControl, Button } from 'react-bootstrap'; // Importa os componentes do React Bootstrap
+import styles from '../assets/css/SearchBar.module.css';
 
 const SearchBar = ({ onSearch }) => {
     const [searchQuery, setSearchQuery] = useState('');
 
-    const searchFunction = () => {
-        onSearch(searchQuery); // Passa a consulta de pesquisa para o componente pai
+    const searchFunction = async () => {
+        if (searchQuery.trim() === '') {
+            toast.error('Por favor, insira um termo de pesquisa.');
+            return;
+        }
+        try {
+            // Simula a pesquisa. Substitua pelo código real de pesquisa, se necessário.
+            await onSearch(searchQuery);
+
+            toast.success('Pesquisa realizada com sucesso!');
+            setSearchQuery(''); // Limpa o campo de pesquisa após o sucesso
+        } catch (error) {
+            toast.error('Houve um problema ao realizar a pesquisa. Tente novamente.');
+        }
     };
 
     return (
-        <div className={styles.searchBar}>
-            <input
-                type="text"
-                id="search-input"
-                className={styles.searchInput}
-                placeholder="Pesquisar..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-            />
-            <button onClick={searchFunction} type="button" className={styles.searchButton}>
-                <FontAwesomeIcon icon={faSearch} />
-            </button>
-        </div>
+        <>
+            <InputGroup className={styles.searchBar}>
+                <FormControl
+                    type="text"
+                    placeholder="Pesquisar..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className={styles.searchInput}
+                />
+                <Button onClick={searchFunction} className={styles.searchButton} variant="outline-secondary">
+                    <FontAwesomeIcon icon={faSearch} />
+                </Button>
+            </InputGroup>
+            {/* Componente para exibir notificações */}
+            <ToastContainer />
+        </>
     );
 };
 

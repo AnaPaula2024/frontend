@@ -1,60 +1,45 @@
-@keyframes pulse {
-    0% {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    50% {
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    }
-    100% {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-}
-
-
 .searchBar {
     display: flex;
     align-items: center;
-    border-radius: 5px;
+    border-radius: 5px; /* Unifique o border-radius */
     overflow: hidden;
     background-color: #f1f1f1; /* Fundo claro */
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    /* Garantir que a barra de busca fique acima de outros elementos */
     position: relative;
     z-index: 10;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    
-}
-
-.searchBar:hover {
-    background-color: #e0e0e0; /* Fundo mais escuro ao passar o mouse */
-    animation: pulse 1.5s infinite; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 40px; /* Defina uma altura fixa para o contêiner */
+    border-radius: 10px 0 0 10px;
 }
 
 .searchInput {
-    padding: 10px;
+    flex: 1;
+    padding: 0 10px; /* Ajuste o padding para corresponder ao do botão */
     font-size: 16px;
     border: none;
     outline: none;
-    width: 200px;
-    border-radius: 5px 0 0 5px;
-    cursor: text;
-    width: 100%;
+    height: 100%; /* Certifique-se de que o input preencha a altura do contêiner pai */
+    box-sizing: border-box; /* Inclui o padding nas dimensões do input */
+    
 }
 
 .searchButton {
-    padding: 10px 15px;
-    background-color: #164B30; /* Botão verde */
-    border: none;
-    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Certifique-se de que o botão preencha a altura do contêiner pai */
+    padding: 0 20px; /* Ajuste o padding conforme necessário */
+    background-color: #164B30;
     color: #fff;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Adicione transição para a transformação e box-shadow */
+    border: none; /* Remova a borda para evitar sobreposição */
+    box-sizing: border-box; /* Inclui o padding nas dimensões do botão */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona um sombreamento ao botão */
 }
 
 .searchButton:hover {
     background-color: var(--primary-color); /* Muda a cor ao passar o mouse */
-    transform: scale(1.1); /* Aumenta ligeiramente o tamanho */
-}
-
-.searchButton i {
-    font-size: 16px;
+    transform: scale(1.1); /* Expande o botão ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Intensifica o sombreamento ao passar o mouse */
 }
