@@ -63,7 +63,7 @@ const PrivacyPolicy = () => {
       <p>Se você tiver dúvidas ou preocupações sobre nossa política de privacidade, entre em contato conosco:</p>
       <ul>
         <li>Email: <a href="mailto:contato@walcem.com.br">contato@walcem.com.br</a></li>
-        <li>Telefone: <a href="tel:11140940378">111-4094-0378</a></li>
+        <li>Telefone: <a href="tel:1140940378">11 4094-0378</a></li>
       </ul>
 
       <h2>Legislação Aplicável</h2>

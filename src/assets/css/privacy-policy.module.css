@@ -1,12 +1,15 @@
+
 .main {
     /* Estilos para o contêiner da página */
     width: 80%;
-    margin: var(--main-margin);
+    margin: var(--main-margin) auto;
     background-color: var(--background-color);
-    padding: var(--main-padding);
+    padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 8%;
+    margin-top: 10%;
     border-radius: 10px;
+    border: 1px solid #90ee90;
+    animation: fadeIn 1s ease-out;
 }
 
 .privacyPolicy {

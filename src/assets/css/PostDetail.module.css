@@ -1,0 +1,64 @@
+/* Estilização do card */
+.card {
+    border: 2px solid #e0e0e0; /* Borda ao redor do card */
+    border-radius: 12px; /* Bordas arredondadas */
+    overflow: hidden; /* Garante que nada ultrapasse as bordas */
+    background-color: #fff; /* Fundo branco para o card */
+    transition: box-shadow 0.3s ease; /* Transição suave para a sombra */
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+/* Wrapper do título */
+.titleWrapper {
+    text-align: center; /* Centraliza o título e os metadados */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+.title {
+    font-size: 2.5rem; /* Tamanho do título maior */
+    color: #333; /* Cor do texto */
+    margin: 0; /* Remove margem padrão */
+    padding: 0 15px; /* Espaçamento lateral */
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Separador de metadados */
+.metaSeparator {
+    display: flex;
+    justify-content: center; /* Centraliza os metadados */
+    align-items: center;
+    font-size: 0.9em;
+    color: #666666;
+}
+
+.metaSeparator span {
+    margin: 0 10px; /* Espaçamento ao redor dos metadados */
+}
+
+/* Estilização da imagem */
+img {
+    border-radius: 12px; /* Bordas arredondadas para a imagem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilização do conteúdo */
+.card-text {
+    line-height: 1.8; /* Aumenta o espaçamento entre linhas para melhor leitura */
+    color: #333; /* Cor do texto */
+    font-size: 1rem; /* Tamanho da fonte do texto */
+    padding: 0 15px; /* Espaçamento lateral */
+}
+
+/* Estilização dos subtítulos */
+h2 {
+    font-size: 1.2rem; /* Tamanho do subtítulo menor */
+    color: #000;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-align: center; /* Centraliza o título */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #e0e0e0;
+}

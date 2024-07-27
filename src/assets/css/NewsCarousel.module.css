@@ -1,0 +1,45 @@
+
+.carouselContainer {
+    width: 100%;
+    margin: auto;
+}
+
+.carouselItem {
+    position: relative;
+    width: 100%;
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Garante que a expansão não afete os outros itens */
+
+}
+
+.carouselItem img {
+    width: 100%;
+    height: 200px; /* Definindo uma altura fixa para as imagens */
+    object-fit: cover; /* Faz com que a imagem cubra o contêiner sem distorcer */
+}
+
+.carouselItem:hover {
+    transform: scale(1.05); /* Expande o item ao passar o mouse */
+    z-index: 10; /* Garante que o item expandido fique sobre os outros, mas sem encostar neles */
+}
+.carouselContent {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1rem;
+    width: calc(100% - 2rem); /* Ajuste a largura para compensar o padding e a sombra dos lados */
+    box-sizing: border-box; /* Inclui o padding na largura total */
+    left: 1rem; /* Ajusta a posição da `carouselContent` para que não invada os lados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Somente sombra suave ao redor do conteúdo */
+}
+
+
+.carouselContent h3 {
+    margin: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.carouselContent p {
+    margin: 0;
+}

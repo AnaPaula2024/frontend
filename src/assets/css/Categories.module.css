@@ -1,3 +1,4 @@
+/* src/assets/css/Categories.module.css */
 .categories {
     margin-bottom: 40px;
 }
@@ -7,9 +8,15 @@
     color: var(--secondary-color);
     margin-bottom: 20px;
 }
+
 .posts {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 40px;
+    gap: 20px; /* Espaço entre os itens */
+    justify-content: space-between;
+}
+
+.post {
+    flex: 1 1 calc(25% - 20px); /* Ajuste a largura do item conforme necessário */
+    box-sizing: border-box;
 }

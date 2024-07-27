@@ -1,14 +1,15 @@
-
+// src/components/Post.jsx
 import React from 'react';
-import styles from '../assets/css/Post.module.css'; 
+import { Link } from 'react-router-dom';
+import styles from '../assets/css/Post.module.css'; // Certifique-se de que o caminho está correto
 
-const Post = ({ imgSrc, title, description, link }) => (
-    <div className={styles.post}>
-        <img src={imgSrc} alt={title} /> {/* Usando a propriedade `imgSrc` */}
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <a href={link}>Leia mais</a>
-    </div>
+const Post = ({ imgSrc, title, description, id }) => (
+  <div className={styles.post}>
+    <img src={imgSrc} alt={title} />
+    <h3>{title}</h3>
+    <p>{description}</p>
+    <Link to={`/post/${id}`} className={styles.readMore}>Leia Mais</Link>
+  </div>
 );
 
 export default Post;

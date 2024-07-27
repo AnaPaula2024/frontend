@@ -1,3 +1,4 @@
+/* Animação do pulsar no logo */
 @keyframes pulse {
   0% {
     transform: scale(1); /* Tamanho original */
@@ -10,6 +11,7 @@
   }
 }
 
+/* Animação da linha verde que se move */
 @keyframes moveLine {
   0% {
     transform: translateX(-100%); /* Inicia fora da tela à esquerda */
@@ -25,11 +27,11 @@
 .header {
   background-color: var(--footer-background);
   padding: var(--header-padding);
-  position: fixed;
+  position:fixed;
   width: 100%;
   top: 0;
   left: 0;
-  transition: top var(--transition-duration), transform 0.3s ease;
+  transition: transform 0.3s ease-in-out; /* Transição para o movimento */
   z-index: 1000;
   max-width: 1920px;
   margin: 0 auto;
@@ -37,33 +39,45 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
   border-radius: 0 0 10px 5px;
   overflow: hidden; /* Garante que a animação fique contida */
+  display: flex;
+  align-items: center;
+  height:80px; /* Aumenta o tamanho do header */
 }
 
-/* Adiciona a linha verde animada */
+/* Linha animada verde abaixo do header */
 .header::after {
-  content: '';
+  content: "";
   position: absolute;
-  bottom: 0; /* Alinha a linha na parte inferior do header */
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 2px; /* Altura da linha ajustada para mais fina */
-  background: #32CD32; /* Cor da linha */
-  transform: translateX(-100%); /* Inicia a linha fora da tela */
+  height: 2px; /* Ajuste a altura da linha conforme necessário */
+  background: #32CD32; /* Cor da linha verde */
   animation: moveLine 2s linear infinite; /* Animação da linha */
+  transform: translateX(-100%); /* Inicia a linha fora da tela */
+  z-index: 1; /* Certifique-se de que a linha esteja abaixo do conteúdo do header */
 }
 
+/* Estilos para o header escondido */
 .headerHidden {
   transform: translateY(-100%);
   transition: transform 0.3s ease-in-out;
 }
 
-
+/* Contêiner de navegação */
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
-  margin: auto;
+  width: 100%;
+  position: relative;
+  padding: 0 10px; /* Adiciona algum padding lateral */
+}
+
+/* Estilos do logo */
+.logo {
+  margin-right: auto; /* Move a logo um pouco mais para o lado */
+  margin-left: 20px; /* Ajusta o espaço do lado esquerdo da logo */
 }
 
 .logo a {
@@ -84,16 +98,18 @@
   transform: scale(0.9);
 }
 
+/* Estilos dos links de navegação */
 .navLinks {
   list-style: none;
   display: flex;
-  justify-content: flex-end;
-  margin-top: 10px;
+  align-items: center;
+  margin: 0;
+  gap: 10px; /* Adiciona um espaço entre os itens da navegação */
 }
 
 .navLinks li {
-  margin-left: 15px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
 }
 
 .navLinks li a {
@@ -102,7 +118,6 @@
   color: #fff;
   font-size: 16px;
   padding: 10px 20px;
-  margin: 0 10px;
   border-radius: 8px; /* Arredondamento igual ao footer */
   background: var(--footer-background);
   transition: color var(--transition-duration) ease, background-color var(--transition-duration) ease, box-shadow var(--transition-duration) ease;

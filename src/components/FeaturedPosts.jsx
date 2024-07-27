@@ -1,40 +1,27 @@
-// src/components/FeaturedPosts.jsx
-
 import React from 'react';
 import Post from './Post';
-import styles from '../assets/css/FeaturedPosts.module.css'; 
-import image1 from '../assets/img/PNRS.png';
-import image2 from '../assets/img/ISO.png';
+import { postsData } from '../data/newsData'; // Use postsData se os dados de destaque estiverem aqui
+import styles from '../assets/css/FeaturedPosts.module.css';
 
-const FeaturedPosts = ({ posts }) => {
-    // Atualizando os dados dos posts para usar imagens importadas
-    const updatedPosts = posts.map(post => {
-        switch (post.image) {
-            case 'PNRS.png':
-                return { ...post, imgSrc: image1 };
-            case 'ISO.png':
-                return { ...post, imgSrc: image2 };
-            default:
-                return post;
-        }
-    });
+const FeaturedPosts = () => {
+  const FeaturedToShow = postsData.slice(0, 2); // Use postsData aqui
 
-    return (
-        <section className={styles.featuredPosts}>
-            <h2>Postagens em Destaque</h2>
-            <div className={styles.posts}>
-                {updatedPosts.map(post => (
-                    <Post
-                        key={post.title}
-                        imgSrc={post.imgSrc}
-                        title={post.title}
-                        description={post.description}
-                        link={post.link}
-                    />
-                ))}
-            </div>
-        </section>
-    );
+  return (
+    <section className={styles.featuredPosts}>
+      <h2>Postagens em Destaque</h2>
+      <div className={styles.posts}>
+        {FeaturedToShow.map(post => (
+          <Post
+            key={post.id}
+            imgSrc={post.imgSrc}
+            title={post.title}
+            description={post.description}
+            id={post.id}
+          />
+        ))}
+      </div>
+    </section>
+  );
 };
 
 export default FeaturedPosts;

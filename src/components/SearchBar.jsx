@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { InputGroup, FormControl, Button } from 'react-bootstrap'; // Importa os componentes do React Bootstrap
+import { InputGroup, FormControl, Button } from 'react-bootstrap';
 import styles from '../assets/css/SearchBar.module.css';
 
 const SearchBar = ({ onSearch }) => {
@@ -15,8 +15,7 @@ const SearchBar = ({ onSearch }) => {
             return;
         }
         try {
-            // Simula a pesquisa. Substitua pelo código real de pesquisa, se necessário.
-            await onSearch(searchQuery);
+            await onSearch(searchQuery); // Certifique-se de que onSearch é uma função válida
 
             toast.success('Pesquisa realizada com sucesso!');
             setSearchQuery(''); // Limpa o campo de pesquisa após o sucesso
@@ -39,7 +38,6 @@ const SearchBar = ({ onSearch }) => {
                     <FontAwesomeIcon icon={faSearch} />
                 </Button>
             </InputGroup>
-            {/* Componente para exibir notificações */}
             <ToastContainer />
         </>
     );
